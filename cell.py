@@ -5,7 +5,7 @@ from window import Window
 class Cell():
 
 
-    def __init__(self, x1, y1, x2, y2, win: Window):
+    def __init__(self, win: Window = None):
 
 
         self.has_left_wall = True
@@ -14,10 +14,7 @@ class Cell():
         self.has_bottom_wall = True
         
          
-        self.__x1 = x1
-        self.__x2 = x2
-        self.__y1 = y1
-        self.__y2 = y2 
+        
 
         self.__win = win 
     
@@ -28,7 +25,12 @@ class Cell():
 
 
     
-    def draw(self):
+    def draw(self , x1, y1, x2, y2):
+
+        self.__x1 = x1
+        self.__x2 = x2
+        self.__y1 = y1
+        self.__y2 = y2 
 
         if self.has_left_wall:
             line = Line(Point(self.__x1, self.__y1), Point(self.__x1, self.__y2))
