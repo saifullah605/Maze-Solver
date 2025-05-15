@@ -40,12 +40,14 @@ class Maze():
     def _animate(self):
         self.__win.redraw()
         time.sleep(0.05)
+    
 
+    def _break_entrance_and_exit(self):
+        entrance_cell = self._cells[0][0]
+        exit_cell = self._cells[self.__num_cols-1][self.__num_rows-1]
 
+        entrance_cell.has_left_wall = False
+        exit_cell.has_right_wall = False
 
-        
-
-        
-
-            
-        
+        self._draw_cell(0,0)
+        self._draw_cell(self.__num_cols-1,self.__num_rows-1)
