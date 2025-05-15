@@ -1,18 +1,19 @@
 from window import Window 
-from cell import Cell
+from maze import Maze
 
 def main():
     win = Window(800,600)
 
+    maze = Maze(100,50,10,10,50,50,win)
 
-    cell = Cell(win)
-    cell2 = Cell(win)
-    
 
-    cell.draw(250,250,300,300)
-    cell2.draw(300,250,350,300)
 
-    cell.draw_move(cell2)
+
+
+
+
+
+ 
 
     win.wait_for_close()
 

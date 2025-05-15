@@ -24,6 +24,10 @@ class Maze():
                 row.append(Cell(self.__win))
             
             self._cells.append(row)
+        
+        for i in range(self.__num_cols):
+            for j in range(self.__num_rows):
+                self._draw_cell(i,j)
     
     def _draw_cell(self, i, j):
         cell_pos_x = self.__cell_size_x*j + self.__x1
