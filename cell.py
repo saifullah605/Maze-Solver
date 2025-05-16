@@ -12,6 +12,9 @@ class Cell():
         self.has_right_wall = True
         self.has_top_wall = True
         self.has_bottom_wall = True
+
+        self.visited = False
+        
         
          
         
